@@ -1,16 +1,28 @@
-body{
+*{
     margin:0;
     padding:0;
-    font-family:Arial;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
     background:#f4f4f4;
 }
 
+/* HEADER */
+
 header{
-    background:teal;
+    background:linear-gradient(to right, teal, blue);
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
+
+header h1{
+    font-size:42px;
+}
+
+/* NAVBAR */
 
 nav{
     background:black;
@@ -21,53 +33,207 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
-}
-
-section{
-    background:white;
     margin:20px;
-    padding:20px;
-    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
 }
 
-footer{
-    background:teal;
-    color:white;
-    text-align:center;
-    padding:10px;
-}
-h2{
-    color:darkblue;
+nav a:hover{
+    color:yellow;
 }
 
-button{
-    background:green;
-    color:white;
-}
+/* COMMON SECTION */
+
 section{
-    box-shadow:0px 0px 10px gray;
+    width:90%;
+    max-width:1000px;
+    background:white;
+    margin:40px auto;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
 }
-header{
-    background:linear-gradient(to right, teal, blue);
+
+/* HOME PAGE */
+
+.home-section{
+    text-align:center;
 }
+
+.home-section h2{
+    font-size:40px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.home-section p{
+    font-size:20px;
+    margin-bottom:30px;
+    color:#444;
+}
+
+.home-section img{
+    width:350px;
+    border-radius:15px;
+}
+
+/* ABOUT PAGE */
+
+.about-section h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+    color:#222;
+}
+
+.about-list{
+    padding-left:30px;
+}
+
+.about-list li{
+    margin-bottom:20px;
+    line-height:1.8;
+    font-size:18px;
+    color:#333;
+}
+
+/* SKILLS PAGE */
+
+.skills-section h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
 .skills{
     display:flex;
-    justify-content:space-around;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
 }
+
+.skills div{
+    background:teal;
+    color:white;
+    width:180px;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* PROJECTS PAGE */
+
+.projects-section h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
 .projects{
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
     gap:20px;
 }
+
+.projects div{
+    background:darkblue;
+    color:white;
+    padding:25px;
+    border-radius:10px;
+}
+
+.projects h3{
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+/* CONTACT PAGE */
+
+.contact-container{
+    width:90%;
+    max-width:700px;
+    background:white;
+    margin:40px auto;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.contact-container h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+/* FORM */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* INPUTS */
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+/* OPTIONS */
+
+.option-group{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-top:10px;
+}
+
+.option-group label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:normal;
+}
+
+/* BUTTON */
+
 button{
-    transition:0.5s;
+    background:green;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+    width:100%;
 }
 
 button:hover{
     background:red;
-    transform:scale(1.1);
+    transition:0.5s;
 }
+
+/* MOBILE */
+
 @media(max-width:768px){
 
     nav a{
@@ -81,7 +247,16 @@ button:hover{
 
     .skills{
         flex-direction:column;
-        gap:10px;
+        align-items:center;
+    }
+
+    .option-group{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .home-section img{
+        width:100%;
     }
 
 }
